@@ -1,0 +1,47 @@
+<h1>Office Hours</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Rank</th>
+      <th>Department </th>
+      <th>Room</th>
+      <th>Email</th>
+      <th>Ext</th>
+      <th>Officehours</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+    
+    
+    <% @p_informations.each do |p_information| %>
+      <tr>
+        <td> <%= "#{current_user.first_name.capitalize}" %></td>
+      <td> <%= "#{current_user.last_name.capitalize}" %> </td>
+        <td><%= p_information.Rank %></td>
+        <td><%= p_information.Department %></td>
+        <td><%= p_information.Room %></td>
+        
+        <td> <%= "#{current_user.email}" %></td>
+        <td><%= p_information.Ext %></td>
+        <td><%= p_information.OfficeHours %></td>
+        
+        
+         <% if (current_user.try(:admin?)) or (current_user == p_information.user) %>
+        <td><%= link_to 'Show', p_information %></td>
+        <td><%= link_to 'Edit', edit_p_information_path(p_information) %></td>
+        <td><%= link_to 'Destroy', p_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+     <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professor', new_p_information_path %>

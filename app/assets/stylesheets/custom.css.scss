@@ -1,0 +1,70 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #CCDFED;
+  color: #F2EDA2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-default {
+  background-color: #CCDFED;
+}
+
+.navbar-default .navbar-brand {
+  font-family: guardian-egyptt, georgia, serif;
+  font-weight: 400;
+  color: #F2EDA2;
+  font-size: 30px;
+}
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.navbar-default .navbar-nav > li > a {
+   
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   font-weight: normal;
+   color: #F2EDA2;
+}
+
+.center {
+  text-align: center;
+}
+
+.col-md-3:nth-child(4n+1){
+  clear:left;
+}
+
+.col-md-6 {
+  h3{font-size: 45px;}
+  h5{font-size: 25px;}
+  p{font-size: 18px;}
+}

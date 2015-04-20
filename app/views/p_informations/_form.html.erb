@@ -1,0 +1,38 @@
+<%= form_for(@p_information) do |f| %>
+  <% if @p_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@p_information.errors.count, "error") %> prohibited this p_information from being saved:</h2>
+
+      <ul>
+      <% @p_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Rank %><br>
+    <%= f.number_field :Rank %>
+  </div>
+  <div class="field">
+    <%= f.label :Department %><br>
+    <%= f.text_field :Department %>
+  </div>
+  <div class="field">
+    <%= f.label :Room %><br>
+    <%= f.text_field :Room %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :Ext %><br>
+    <%= f.text_field :Ext %>
+  </div>
+  <div class="field">
+    <%= f.label :OfficeHours %><br>
+    <%= f.text_field :OfficeHours %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @p_info.Name %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @p_info.Rank %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @p_info.Department %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @p_info.Room %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @p_info.Email %>
+</p>
+
+<p>
+  <strong>Ext:</strong>
+  <%= @p_info.Ext %>
+</p>
+
+<p>
+  <strong>Officehours:</strong>
+  <%= @p_info.OfficeHours %>
+</p>
+
+<%= link_to 'Edit', edit_p_info_path(@p_info) %> |
+<%= link_to 'Back', p_infos_path %>

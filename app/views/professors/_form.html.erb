@@ -1,0 +1,69 @@
+<%= form_for(@professor) do |f| %>
+  <% if @professor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@professor.errors.count, "error") %> prohibited this professor from being saved:</h2>
+
+      <ul>
+      <% @professor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :First_Name %><br>
+    <%= f.text_field :First_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Last_Name %><br>
+    <%= f.text_field :Last_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Department %><br>
+    <%= f.text_field :Department %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_field :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br>
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :State %><br>
+    <%= f.text_field :State %>
+  </div>
+  <div class="field">
+    <%= f.label :Zip_Code %><br>
+    <%= f.text_field :Zip_Code %>
+  </div>
+  <div class="field">
+    <%= f.label :Cell_Phone %><br>
+    <%= f.text_field :Cell_Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Home_Phone %><br>
+    <%= f.text_field :Home_Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Office_Phone %><br>
+    <%= f.text_field :Office_Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Office_Fax %><br>
+    <%= f.text_field :Office_Fax %>
+  </div>
+  <div class="field">
+    <%= f.label :Primary_Email %><br>
+    <%= f.text_field :Primary_Email %>
+  </div>
+  <div class="field">
+    <%= f.label :Secondary_Email %><br>
+    <%= f.text_field :Secondary_Email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

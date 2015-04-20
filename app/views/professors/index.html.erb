@@ -1,0 +1,88 @@
+<h1>School of Business Professors</h1>
+
+
+<table class="table table-striped">
+  <thead>
+        <% @professors.each do |professor| %>
+
+    <tr>
+      
+   <% if (current_user.try(:admin?)) or (current_user == professor.user) %>
+
+   
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Department</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip code</th>
+      <th>Cell phone</th>
+      <th>Home phone</th>
+      <th>Office phone</th>
+      <th>Office fax</th>
+      <th>Primary email</th>
+      <th>Secondary email</th>
+      
+      <%else%>
+      
+       <th>First name</th>
+      <th>Last name</th>
+      <th>Department</th>
+      <th>Primary email</th>
+      
+     
+  <% end %>
+         
+    <% end %>
+
+      
+   
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professors.each do |professor| %>
+      <tr>
+        
+    <% if (current_user.try(:admin?)) or (current_user == professor.user) %>
+
+        <td><%= professor.First_Name %></td>
+        <td><%= professor.Last_Name %></td>
+        <td><%= professor.Department %></td>
+        <td><%= professor.Address %></td>
+        <td><%= professor.City %></td>
+        <td><%= professor.State %></td>
+        <td><%= professor.Zip_Code %></td>
+        <td><%= professor.Cell_Phone %></td>
+        <td><%= professor.Home_Phone %></td>
+        <td><%= professor.Office_Phone %></td>
+        <td><%= professor.Office_Fax %></td>
+        <td><%= professor.Primary_Email %></td>
+        <td><%= professor.Secondary_Email %></td>
+        
+        <%else%>
+      
+       <td><%= professor.First_Name %></td>
+        <td><%= professor.Last_Name %></td>
+        <td><%= professor.Department %></td>
+        <td><%= professor.Primary_Email %></td>
+
+        
+    <% end %>
+        
+        <% if (current_user.try(:admin?)) or (current_user == professor.user) %>
+            <td><%= link_to 'Show', professor %></td>
+            <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
+            <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+         
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professor', new_professor_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Course_Title: MyString
+  CRN: 1
+  Days: MyString
+  Time: MyString
+  Roomstring: MyString
+  Enrollment: MyString
+
+two:
+  Course_Title: MyString
+  CRN: 1
+  Days: MyString
+  Time: MyString
+  Roomstring: MyString
+  Enrollment: MyString

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @professor.First_Name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @professor.Last_Name %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @professor.Department %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @professor.Address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @professor.City %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @professor.State %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @professor.Zip_Code %>
+</p>
+
+<p>
+  <strong>Cell phone:</strong>
+  <%= @professor.Cell_Phone %>
+</p>
+
+<p>
+  <strong>Home phone:</strong>
+  <%= @professor.Home_Phone %>
+</p>
+
+<p>
+  <strong>Office phone:</strong>
+  <%= @professor.Office_Phone %>
+</p>
+
+<p>
+  <strong>Office fax:</strong>
+  <%= @professor.Office_Fax %>
+</p>
+
+<p>
+  <strong>Primary email:</strong>
+  <%= @professor.Primary_Email %>
+</p>
+
+<p>
+  <strong>Secondary email:</strong>
+  <%= @professor.Secondary_Email %>
+</p>
+
+<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Back', professors_path %>

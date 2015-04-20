@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= "#{current_user.first_name.capitalize}"%>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= "#{current_user.last_name.capitalize}"  %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @p_information.Rank %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @p_information.Department %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @p_information.Room %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= "#{current_user.email}" %>
+</p>
+
+<p>
+  <strong>Ext:</strong>
+  <%= @p_information.Ext %>
+</p>
+
+<p>
+  <strong>Officehours:</strong>
+  <%= @p_information.OfficeHours %>
+</p>
+
+<%= link_to 'Edit', edit_p_information_path(@p_information) %> |
+<%= link_to 'Back', p_informations_path %>

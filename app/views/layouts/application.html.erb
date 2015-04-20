@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AssuranceLearn</title>
+  <title>Assurance of Learning HU</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <%= render 'layouts/header' %>
+  
+  
+<div class="container">
+  
 
+ 
+  <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+          <%= value %>
+  </div>
+<% end %>
+      
 <%= yield %>
+  
+
+  <%= render 'layouts/footer' %> 
+  
+  </div> 
 
 </body>
 </html>
