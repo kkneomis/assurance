@@ -1,0 +1,65 @@
+<%= form_for(@questions_aol_1) do |f| %>
+  <% if @questions_aol_1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@questions_aol_1.errors.count, "error") %> prohibited this questions_aol_1 from being saved:</h2>
+
+      <ul>
+      <% @questions_aol_1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :q1 %><br>
+    <%= f.text_field :q1 %>
+  </div>
+  <div class="field">
+    <%= f.label :q2 %><br>
+    <%= f.text_field :q2 %>
+  </div>
+  <div class="field">
+    <%= f.label :q3 %><br>
+    <%= f.text_field :q3 %>
+  </div>
+  <div class="field">
+    <%= f.label :q4 %><br>
+    <%= f.text_field :q4 %>
+  </div>
+  <div class="field">
+    <%= f.label :q5 %><br>
+    <%= f.text_field :q5 %>
+  </div>
+  <div class="field">
+    <%= f.label :q6 %><br>
+    <%= f.text_field :q6 %>
+  </div>
+  <div class="field">
+    <%= f.label :q7 %><br>
+    <%= f.text_field :q7 %>
+  </div>
+  <div class="field">
+    <%= f.label :q8 %><br>
+    <%= f.text_field :q8 %>
+  </div>
+  <div class="field">
+    <%= f.label :q9 %><br>
+    <%= f.text_field :q9 %>
+  </div>
+  <div class="field">
+    <%= f.label :q10 %><br>
+    <%= f.text_field :q10 %>
+  </div>
+  <div class="field">
+    <%= f.label :q11 %><br>
+    <%= f.text_field :q11 %>
+  </div>
+  <div class="field">
+    <%= f.label :q12 %><br>
+    <%= f.text_field :q12 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  resources :high_scores
+
+  resources :questions_aol_1s
+
   resources :course_informations
 
   resources :p_informations
@@ -72,4 +77,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  #Makes section for survey
+  
 end

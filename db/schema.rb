@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119201125) do
+ActiveRecord::Schema.define(version: 20150421193806) do
 
   create_table "course_informations", force: true do |t|
     t.string   "Course_Title"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20141119201125) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "high_scores", force: true do |t|
+    t.string   "game"
+    t.integer  "score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "listings", force: true do |t|
@@ -102,6 +109,64 @@ ActiveRecord::Schema.define(version: 20141119201125) do
   end
 
   add_index "professors", ["Professor_ID"], name: "index_professors_on_Professor_ID"
+
+  create_table "questions_aol_1s", force: true do |t|
+    t.string   "q1"
+    t.string   "q2"
+    t.string   "q3"
+    t.string   "q4"
+    t.string   "q5"
+    t.string   "q6"
+    t.string   "q7"
+    t.string   "q8"
+    t.string   "q9"
+    t.string   "q10"
+    t.string   "q11"
+    t.string   "q12"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rapidfire_answer_groups", force: true do |t|
+    t.integer  "question_group_id"
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rapidfire_answer_groups", ["question_group_id"], name: "index_rapidfire_answer_groups_on_question_group_id"
+  add_index "rapidfire_answer_groups", ["user_id", "user_type"], name: "index_rapidfire_answer_groups_on_user_id_and_user_type"
+
+  create_table "rapidfire_answers", force: true do |t|
+    t.integer  "answer_group_id"
+    t.integer  "question_id"
+    t.text     "answer_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rapidfire_answers", ["answer_group_id"], name: "index_rapidfire_answers_on_answer_group_id"
+  add_index "rapidfire_answers", ["question_id"], name: "index_rapidfire_answers_on_question_id"
+
+  create_table "rapidfire_question_groups", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rapidfire_questions", force: true do |t|
+    t.integer  "question_group_id"
+    t.string   "type"
+    t.string   "question_text"
+    t.integer  "position"
+    t.text     "answer_options"
+    t.text     "validation_rules"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rapidfire_questions", ["question_group_id"], name: "index_rapidfire_questions_on_question_group_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
