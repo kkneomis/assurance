@@ -11,7 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421193806) do
+ActiveRecord::Schema.define(version: 20150422114036) do
+
+  create_table "aol_fours", force: true do |t|
+    t.string   "q_nineteen"
+    t.string   "q_twenty"
+    t.string   "q_twentyone"
+    t.string   "q_twentytwo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "aol_ones", force: true do |t|
+    t.string   "q_one"
+    t.string   "q_two"
+    t.string   "q_three"
+    t.string   "q_four"
+    t.string   "q_five"
+    t.string   "q_six"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "aol_threes", force: true do |t|
+    t.string   "q_thirthteen"
+    t.string   "q_fourthteen"
+    t.string   "q_fithteen"
+    t.string   "q_sixthteen"
+    t.string   "q_seventeen"
+    t.string   "q_eightteen"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "aol_twos", force: true do |t|
+    t.string   "q_seven"
+    t.string   "q_eight"
+    t.string   "q_nine"
+    t.string   "q_ten"
+    t.string   "q_eleven"
+    t.string   "q_twelve"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "course_informations", force: true do |t|
     t.string   "Course_Title"

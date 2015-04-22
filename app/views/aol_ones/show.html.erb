@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>"What is the required text for this course? Is it department wide?"</strong>
+  <%= @aol_one.q_one %>
+</p>
+
+<p>
+  <strong>"Did the faculty use the same syllabus? If it differed, how?"</strong>
+  <%= @aol_one.q_two %>
+</p>
+
+<p>
+  <strong>"Describe the format of the class? (lectures, presentations, etc)"</strong>
+  <%= @aol_one.q_three %>
+</p>
+
+<p>
+  <strong>"Describe the extent to which the case method was used in your class"</strong>
+  <%= @aol_one.q_four %>
+</p>
+
+<p>
+  <strong>"Explain the extent to which students had to write? Was their grade impacted by these assignments"</strong>
+  <%= @aol_one.q_five %>
+</p>
+
+<p>
+  <strong>"Explain the extent to which students had to write? Was their grade impacted by these assignments"</strong>
+  <%= @aol_one.q_six %>
+</p>
+
+<%= link_to 'Edit', edit_aol_one_path(@aol_one) %> |
+<%= link_to 'Next Page', new_aol_two_path %>

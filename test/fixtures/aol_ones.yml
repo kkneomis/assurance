@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  q_one: MyString
+  q_two: MyString
+  q_three: MyString
+  q_four: MyString
+  q_five: MyString
+  q_six: MyString
+
+two:
+  q_one: MyString
+  q_two: MyString
+  q_three: MyString
+  q_four: MyString
+  q_five: MyString
+  q_six: MyString

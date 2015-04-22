@@ -37,6 +37,9 @@ gem "paperclip-dropbox", ">= 1.1.7"
 #Gem for dropbox account protection
 gem "figaro"
 
+#gem for data table
+gem "best_in_place"
+
 
 
 

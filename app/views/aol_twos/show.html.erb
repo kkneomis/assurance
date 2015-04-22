@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>"Describe how technology was used in the course" </strong>
+  <%= @aol_two.q_seven %>
+</p>
+
+<p>
+  <strong>"What assessments did the professor use over the course to assess knowledge (other than final)?"</strong>
+  <%= @aol_two.q_eight %>
+</p>
+
+<p>
+  <strong>"Did the faculty 'curve' or modify any grades during this semester"</strong>
+  <%= @aol_two.q_nine %>
+</p>
+
+<p>
+  <strong>"Describe the extra credit, its value, and impact on final grade"</strong>
+  <%= @aol_two.q_ten %>
+</p>
+
+<p>
+  <strong>"Did the faculty adminster a comprehensive final exam to assess student knowledge"</strong>
+  <%= @aol_two.q_eleven %>
+</p>
+
+<p>
+  <strong>"What percentage did the final exam hold for this course"</strong>
+  <%= @aol_two.q_twelve %>
+</p>
+
+<%= link_to 'Edit', edit_aol_two_path(@aol_two) %> |
+<%= link_to 'Next Page', new_aol_three_path %>

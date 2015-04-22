@@ -1,0 +1,35 @@
+<h1>AOL Responses Page 1</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question 1</th>
+      <th>Question 2</th>
+      <th>Question 3</th>
+      <th>Question 4</th>
+      <th>Question 5</th>
+      <th>Question 6</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aol_ones.each do |aol_one| %>
+      <tr>
+        <td><%= aol_one.q_one %></td>
+        <td><%= aol_one.q_two %></td>
+        <td><%= aol_one.q_three %></td>
+        <td><%= aol_one.q_four %></td>
+        <td><%= aol_one.q_five %></td>
+        <td><%= aol_one.q_six %></td>
+        <td><%= link_to 'Show', aol_one %></td>
+        <td><%= link_to 'Edit', edit_aol_one_path(aol_one) %></td>
+        <td><%= link_to 'Destroy', aol_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aol one', new_aol_one_path %>

@@ -1,0 +1,31 @@
+<h1>Listing aol_fours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Q nineteen</th>
+      <th>Q twenty</th>
+      <th>Q twentyone</th>
+      <th>Q twentytwo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aol_fours.each do |aol_four| %>
+      <tr>
+        <td><%= aol_four.q_nineteen %></td>
+        <td><%= aol_four.q_twenty %></td>
+        <td><%= aol_four.q_twentyone %></td>
+        <td><%= aol_four.q_twentytwo %></td>
+        <td><%= link_to 'Show', aol_four %></td>
+        <td><%= link_to 'Edit', edit_aol_four_path(aol_four) %></td>
+        <td><%= link_to 'Destroy', aol_four, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aol four', new_aol_four_path %>

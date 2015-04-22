@@ -1,0 +1,61 @@
+<%= form_for(@aol_three) do |f| %>
+  <% if @aol_three.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aol_three.errors.count, "error") %> prohibited this aol_three from being saved:</h2>
+
+      <ul>
+      <% @aol_three.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :q_thirthteen, "What were the course learning objectives and how did the final emcompass that?" %><br>
+    <%= f.text_field :q_thirthteen %> 
+    
+  </div>
+  <div class="field">
+    <%= f.label :q_fourthteen, "Indicate the number of students that scored in the following ranges" %><br>
+    <%= label_tag(:q_fourthteen, "100%-90%") %>
+    <%= f.text_field :q_fourthteen %> 
+    <%= label_tag(:fourthteen, "90%-80%") %>
+    <%= f.text_field :q_fourthteen %> 
+    <%= label_tag(:fourthteen, "80%-70%") %>
+    <%= f.text_field :q_fourthteen %>
+    <%= label_tag(:fourthteen, "70%-60%") %>
+    <%= f.text_field :q_fourthteen %> 
+    <%= label_tag(:fourthteen, "60% Below") %>
+    <%= f.text_field :q_fourthteen %> 
+
+  </div>
+  <div class="field">
+    <%= f.label :q_fithteen, "Is the faculty satisfied with a final exam as a means to assess students? Why or why not?"  %><br>
+    <%= f.text_field :q_fithteen %>
+  </div>
+  <div class="field">
+    <%= f.label :q_sixthteen, "On the final exam in what areas do students excel?" %><br>
+    <%= f.text_field :q_sixthteen %>
+  </div>
+  <div class="field">
+    <%= f.label :q_seventeen, "What will the faculty do to improve those areas where students perform poorly" %><br>
+    <%= f.text_field :q_seventeen %>
+  </div>
+  <div class="field">
+    <%= f.label :q_eightteen, "Indicate the number of students who earn the following grade" %><br>
+     <%= label_tag(:q_eightteen, "A") %>
+    <%= f.text_field :q_eightteen %> 
+    <%= label_tag(:q_eightteen, "B") %>
+    <%= f.text_field :q_eightteen %> 
+    <%= label_tag(:q_eightteen, "C") %>
+    <%= f.text_field :q_eightteen %>
+    <%= label_tag(:q_eightteen, "D") %>
+    <%= f.text_field :q_eightteen %> 
+    <%= label_tag(:q_eightteen, "F") %>
+    <%= f.text_field :q_eightteen %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  resources :aol_fours
+
+  resources :aol_threes
+
+  resources :aol_twos
+
+  resources :aol_ones
+
   resources :high_scores
 
   resources :questions_aol_1s

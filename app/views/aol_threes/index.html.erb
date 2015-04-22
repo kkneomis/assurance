@@ -1,0 +1,35 @@
+<h1>AOL Page 3</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question thirthteen</th>
+      <th>Question fourthteen</th>
+      <th>Question fithteen</th>
+      <th>Question sixthteen</th>
+      <th>Question seventeen</th>
+      <th>Question eightteen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aol_threes.each do |aol_three| %>
+      <tr>
+        <td><%= aol_three.q_thirthteen %></td>
+        <td><%= aol_three.q_fourthteen %></td>
+        <td><%= aol_three.q_fithteen %></td>
+        <td><%= aol_three.q_sixthteen %></td>
+        <td><%= aol_three.q_seventeen %></td>
+        <td><%= aol_three.q_eightteen %></td>
+        <td><%= link_to 'Show', aol_three %></td>
+        <td><%= link_to 'Edit', edit_aol_three_path(aol_three) %></td>
+        <td><%= link_to 'Destroy', aol_three, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aol three', new_aol_three_path %>

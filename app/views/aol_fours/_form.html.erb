@@ -1,0 +1,37 @@
+<%= form_for(@aol_four) do |f| %>
+  <% if @aol_four.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aol_four.errors.count, "error") %> prohibited this aol_four from being saved:</h2>
+
+      <ul>
+      <% @aol_four.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :q_nineteen, "How was student engagement and attendance during course?" %><br>
+    <%= f.text_field :q_nineteen %>
+  </div>
+  <div class="field">
+    <%= f.label :q_twenty, "Did a discrepancy occur between student's performance in the course and final exam?" %><br>
+    <%= f.text_field :q_twenty %>
+  </div>
+  <div class="field">
+    <%= f.label :q_twentyone, "What Changes did you make throughout the semster? Effective? Ineffective?" %><br>
+    <%= label_tag(:q_twentyone, "Effective") %>
+    <%= f.text_field :q_twentyone %> 
+    <%= label_tag(:q_twentyone, "Ineffective") %>
+    <%= f.text_field :q_twentyone %> 
+   
+  </div>
+  <div class="field">
+    <%= f.label :q_twentytwo, "What strategies do you plan to implement to improve student learning?" %><br>
+    <%= f.text_field :q_twentytwo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

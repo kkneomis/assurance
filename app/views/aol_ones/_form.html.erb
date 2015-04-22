@@ -1,0 +1,41 @@
+<%= form_for(@aol_one) do |f| %>
+  <% if @aol_one.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aol_one.errors.count, "error") %> prohibited this aol_one from being saved:</h2>
+
+      <ul>
+      <% @aol_one.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :q_one, "What is the required text for this course? Is it department wide?" %><br>
+    <%= f.text_field :q_one %>
+  </div>
+  <div class="field">
+    <%= f.label :q_two,"Did the faculty use the same syllabus? If it differed, how?" %><br>
+    <%= f.text_field :q_two %>
+  </div>
+  <div class="field">
+    <%= f.label :q_three, "Did each faculty member complete the topics outlined in the syllabus?" %><br>
+    <%= f.text_field :q_three %>
+  </div>
+  <div class="field">
+    <%= f.label :q_four, "Describe the format of the class? (lectures, presentations, etc)" %><br>
+    <%= f.text_field :q_four %>
+  </div>
+  <div class="field">
+    <%= f.label :q_five, "Describe the extent to which the case method was used in your class" %><br>
+    <%= f.text_field :q_five %>
+  </div>
+  <div class="field">
+    <%= f.label :q_six, "Explain the extent to which students had to write? Was their grade impacted by these assignments" %><br>
+    <%= f.text_field :q_six %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
