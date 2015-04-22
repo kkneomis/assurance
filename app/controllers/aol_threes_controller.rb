@@ -1,6 +1,9 @@
 class AolThreesController < ApplicationController
   before_action :set_aol_three, only: [:show, :edit, :update, :destroy]
-
+   before_action :authenticate_user!
+  before_action :check_user, only: [:edit, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
+  
   respond_to :html
 
   def index

@@ -10,32 +10,39 @@
       </ul>
     </div>
   <% end %>
-
+<hr>
   <div class="field">
     <%= f.label :q_one, "What is the required text for this course? Is it department wide?" %><br>
     <%= f.text_field :q_one %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_two,"Did the faculty use the same syllabus? If it differed, how?" %><br>
     <%= f.text_field :q_two %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_three, "Did each faculty member complete the topics outlined in the syllabus?" %><br>
     <%= f.text_field :q_three %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_four, "Describe the format of the class? (lectures, presentations, etc)" %><br>
     <%= f.text_field :q_four %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_five, "Describe the extent to which the case method was used in your class" %><br>
     <%= f.text_field :q_five %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_six, "Explain the extent to which students had to write? Was their grade impacted by these assignments" %><br>
     <%= f.text_field :q_six %>
   </div>
+<hr>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
+<hr>
 <% end %>

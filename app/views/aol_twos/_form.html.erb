@@ -11,27 +11,33 @@
     </div>
   <% end %>
 
+<hr>
   <div class="field">
     <%= f.label :q_seven, "Describe how technology was used in the course" %><br>
     <%= f.text_field :q_seven %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_eight, "What assessments did the professor use over the course to assess knowledge (other than final)?" %><br>
     <%= f.text_field :q_eight %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_nine, "Did the faculty 'curve' or modify any grades during this semester" %><br>
     <%= f.text_field :q_nine %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_ten, "Describe the extra credit, its value, and impact on final grade" %><br>
     <%= f.text_field :q_ten %>
   </div>
+<hr>
   <div class="field">
     
     <%= f.label :q_eleven, "Did the faculty adminster a comprehensive final exam to assess student knowledge" %><br>
     <%= f.text_field :q_eleven %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :"What percentage did the final exam hold for this course" %><br>
     <%= radio_button_tag(:"q_twelve", "40%") %>
@@ -45,6 +51,7 @@
     <%= radio_button_tag(:q_twelve, "other") %>
     <%= label_tag(:q_twelve, "other") %>
   </div>
+<hr>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'congrats_new/congrats'
+
   resources :aol_fours
 
   resources :aol_threes
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
   resources :professor_schedules
 
   resources :professors
+  
+  resources :congrats
 
   devise_for :users
   resources :listings

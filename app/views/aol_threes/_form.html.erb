@@ -10,12 +10,13 @@
       </ul>
     </div>
   <% end %>
-
+<hr>
   <div class="field">
     <%= f.label :q_thirthteen, "What were the course learning objectives and how did the final emcompass that?" %><br>
     <%= f.text_field :q_thirthteen %> 
     
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_fourthteen, "Indicate the number of students that scored in the following ranges" %><br>
     <%= label_tag(:q_fourthteen, "100%-90%") %>
@@ -30,18 +31,22 @@
     <%= f.text_field :q_fourthteen %> 
 
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_fithteen, "Is the faculty satisfied with a final exam as a means to assess students? Why or why not?"  %><br>
     <%= f.text_field :q_fithteen %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_sixthteen, "On the final exam in what areas do students excel?" %><br>
     <%= f.text_field :q_sixthteen %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_seventeen, "What will the faculty do to improve those areas where students perform poorly" %><br>
     <%= f.text_field :q_seventeen %>
   </div>
+<hr>
   <div class="field">
     <%= f.label :q_eightteen, "Indicate the number of students who earn the following grade" %><br>
      <%= label_tag(:q_eightteen, "A") %>
@@ -55,6 +60,7 @@
     <%= label_tag(:q_eightteen, "F") %>
     <%= f.text_field :q_eightteen %>
   </div>
+<hr>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
