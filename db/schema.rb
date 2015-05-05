@@ -131,9 +131,8 @@ ActiveRecord::Schema.define(version: 20150422114036) do
   end
 
   create_table "professors", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "Professor_ID"
+    t.string   "First_Name"
+    t.string   "Last_Name"
     t.string   "Department"
     t.string   "Address"
     t.string   "City"
@@ -142,15 +141,13 @@ ActiveRecord::Schema.define(version: 20150422114036) do
     t.string   "Cell_Phone"
     t.string   "Home_Phone"
     t.string   "Office_Phone"
+    t.string   "Office_Fax"
     t.string   "Primary_Email"
     t.string   "Secondary_Email"
-    t.string   "First_Name"
-    t.string   "Last_Name"
-    t.string   "Office_Fax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user_id"
   end
-
-  add_index "professors", ["Professor_ID"], name: "index_professors_on_Professor_ID"
 
   create_table "questions_aol_1s", force: true do |t|
     t.string   "q1"
